@@ -14,6 +14,7 @@ body {
     --hover-color: #ff0055;
     --light-color: #ffe0e7;
     --dark-color: #252525;
+    --blanco: #f5f5f5;
 }
 
 .container {
@@ -103,6 +104,14 @@ ul a {
 }
 .nav__close {
     display: var(--show, none);
+}
+
+/*Para que se siguieran aplicando los estilos del Nav simplemente le agregue una clase mas para poder modificar su posicion encima del slider */
+
+.paginas{
+    position: absolute;
+    z-index: 40;
+    margin-left: 20px;
 }
 
 .hero__container {
@@ -202,6 +211,104 @@ ul a {
     display: none;
 }
 
+/*Slider estilos*/
+.gallery {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+ }
+ 
+ .gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+ }
+ 
+ .gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 600px;
+    position: relative;
+ }
+ 
+ .gallery-item img {
+    width: 100%;
+    display: block;
+    filter: brightness(40%);
+ }
+
+ .gallery-item video{
+   display: none;
+ }
+ 
+
+ .gallery-item button{
+   z-index: 40;
+   position: absolute;
+   bottom: 40px;
+   right: 40px;
+   border: none;
+   font-weight: bold;
+   background-color: var(--dark-color);
+   color: var(--blanco);
+   padding: 16px 28px;
+   border-radius: 12px;
+   cursor: pointer;
+ }
+
+.gallery-item button:hover{
+   background-color: var(--hover-color);
+}
+
+ figure{
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+ }
+ 
+ .nav-button{
+    cursor: pointer;
+ }
+
+ .prev-button{
+   margin-left: 10px;
+ }
+ .next-button{
+   margin-right:  35px;
+ }
+
+
+ .text__gallery h2{
+    font-size: 20px;
+    max-width: 300px;
+    margin: 0 0 20px 0;
+    color: var(--primary-color);
+ }
+
+ .text__gallery p{
+    max-width: 300px;
+    margin-top: 0px;
+ }
+ .text__gallery{
+   color: var(--blanco);
+    position: absolute;
+    width: 600px;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 80px 20px;
+ }
+/*Fin estilos slider*/
+
 
 
 
@@ -246,13 +353,36 @@ footer a {
 }
 
 @media (min-width: 768px) {
+
+    .text__gallery h2, .text__gallery p{
+        max-width: 100%;
+    }
+    
+    .text__gallery h2{
+        font-size: 32px;
+    }
+    
+    
+    .text__gallery p{
+        font-size: 20px;
+    }
+
+    .gallery-item video{
+        display: block;
+        width: 320px;
+        position: absolute;
+        z-index: 40;
+        bottom: 40px;
+        margin-left: 20px;
+      }
+
+}
+
+@media (max-width:800px) {
     footer {
         flex-direction: row;
         gap: 10px;
     }
-}
-
-@media (max-width:800px) {
     .nav__menu_open {
         display: block;
     }
@@ -388,4 +518,12 @@ footer a {
     .hero__container {
         width: 300px;
     }
+}
+
+@media (min-width: 1200px) {
+    .text__gallery h2{
+        font-size: 44px;
+
+    }
+    
 }
