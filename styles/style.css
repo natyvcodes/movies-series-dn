@@ -14,6 +14,7 @@ body {
     --hover-color: #ff0055;
     --light-color: #ffe0e7;
     --dark-color: #252525;
+    --blanco: #f5f5f5;
 }
 
 .container {
@@ -103,6 +104,14 @@ ul a {
 }
 .nav__close {
     display: var(--show, none);
+}
+
+/*Para que se siguieran aplicando los estilos del Nav simplemente le agregue una clase mas para poder modificar su posicion encima del slider */
+
+.paginas{
+    position: absolute;
+    z-index: 40;
+    margin-left: 20px;
 }
 
 .hero__container {
@@ -211,6 +220,7 @@ ul a {
 
 
 
+
 footer {
     background: var(--dark-color);
     padding: 30px 40px;
@@ -250,13 +260,36 @@ footer a {
 }
 
 @media (min-width: 768px) {
+
+    .text__gallery h2, .text__gallery p{
+        max-width: 100%;
+    }
+    
+    .text__gallery h2{
+        font-size: 32px;
+    }
+    
+    
+    .text__gallery p{
+        font-size: 20px;
+    }
+
+    .gallery-item video{
+        display: block;
+        width: 320px;
+        position: absolute;
+        z-index: 40;
+        bottom: 40px;
+        margin-left: 20px;
+      }
+
+}
+
+@media (max-width:800px) {
     footer {
         flex-direction: row;
         gap: 10px;
     }
-}
-
-@media (max-width:800px) {
     .nav__menu_open {
         display: block;
     }
@@ -411,4 +444,12 @@ footer a {
         max-width: auto;
         min-width: 130px;
     }
+}
+
+@media (min-width: 1200px) {
+    .text__gallery h2{
+        font-size: 44px;
+
+    }
+    
 }
