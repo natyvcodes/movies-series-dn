@@ -227,11 +227,12 @@ ul a {
  .gallery-item {
     min-width: 100%;
     box-sizing: border-box;
-    height: 600px;
     position: relative;
  }
  
  .gallery-item img {
+    height: 120%;
+    object-fit: cover;
     width: 100%;
     display: block;
     filter: brightness(40%);
@@ -267,9 +268,8 @@ ul a {
  
  .gallery-navigation {
     display: flex;
-    justify-content: space-between;
     position: absolute;
-    top: 40%;
+    bottom: 10px;
     width: 100%;
  }
  
@@ -353,7 +353,16 @@ footer a {
 }
 
 @media (min-width: 768px) {
-
+    .gallery-navigation {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 40%;
+        width: 100%;
+     }
+    .gallery-item{
+        height: 600px;
+    }
     .text__gallery h2, .text__gallery p{
         max-width: 100%;
     }

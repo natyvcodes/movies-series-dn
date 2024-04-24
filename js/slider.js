@@ -9,7 +9,7 @@ document.querySelector('.next-button').addEventListener('click', () => {
 });
 setInterval(() => {
     navigate(1);
-  }, 8000);
+  }, 6000);
   
   
 
