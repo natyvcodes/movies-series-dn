@@ -150,58 +150,63 @@ ul a {
     flex-direction: column;
     text-align: center;
 }
-
-/* .genre__container {
+/*Generos*/
+.genre__container {
     margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
-
 .about_article {
     text-align: center;
+    max-width: 400px ;
+    min-width: 170px;
+    margin: 20px;
 }
 
-.month__recomendation {
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image: linear-gradient(#444cf7 0.6000000000000001px, transparent 0.6000000000000001px), linear-gradient(to right, #444cf7 0.6000000000000001px, #e5e5f7 0.6000000000000001px);
-    background-size: 12px 12px;
-    text-align: center;
-}
-
-.recom__container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 50px;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.recom__title {
-    font-size: 1.5rem;
-    padding: 30px 0;
-}
-.recom__paragraph {
-    margin-bottom: 30px;
-}
-.recom__info {
-    width: 400px;
-}
-
-.recom__img {
-    width: 300px;
-    object-fit: cover;
-} */
 
 .menu__imgs {
     display: none;
 }
 
+.month__recomendation{
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+
+.recom__img {
+    width: 200px;
+    object-fit: cover;
+} 
+.recom__container {
+   text-align: center;
+   display: flex;
+   gap: 30px;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.recom__title {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.recom__paragraph {
+    margin-bottom: 30px;
+}
+.recom__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+    margin-bottom: 10px;
+}
 
 
 
@@ -234,7 +239,6 @@ footer ul {
     padding: 0;
 }
 
-
 footer a {
     text-decoration: none;
     color: var(--light-color);
@@ -265,7 +269,7 @@ footer a {
         top: 0;
         left: 0;
         height: 120%;
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -284,7 +288,7 @@ footer a {
         display: flex;
         flex-direction: column;
     }
-    .menu__imgs {
+  .menu__imgs {
         display: block;
     }
     .nav__links {
@@ -327,6 +331,7 @@ footer a {
     .hero__container {
         width: 300px;
     }
+    /*Generos*/
     .about__sec {
         font-family: "Ubuntu", sans-serif;
         padding: 80px 0;
@@ -345,6 +350,7 @@ footer a {
     .genre__container {
         margin: 20px 0;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 30px;
@@ -352,9 +358,21 @@ footer a {
     
     .about_article {
         text-align: center;
+        width: 300px;
+    } 
+    
+    /*Recomendaciones*/
+    .month__recomendation{
+        text-align: center;
+        width: 100%;
+        padding: 50px 0;
     }
+
     
-    
+    .recom__img {
+        width: 200px;
+        object-fit: cover;
+    } 
     .recom__container {
        text-align: center;
     }
@@ -367,13 +385,14 @@ footer a {
         margin-bottom: 30px;
     }
     .recom__info {
-        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:15px;
+        margin-bottom: 10px;
     }
-    
-    .recom__img {
-        width: 300px;
-        object-fit: cover;
-    }
+
 }
 
 @media (max-width:600px) {
@@ -387,5 +406,9 @@ footer a {
 
     .hero__container {
         width: 300px;
+    }
+    .about_article {
+        max-width: auto;
+        min-width: 130px;
     }
 }
