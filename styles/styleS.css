@@ -159,7 +159,13 @@ ul a {
     margin: 0;
     padding: 0;
 }
-
+.slides-container span {
+    font-size: 5rem;
+    position: relative;
+    top: 40%;
+    left: 25%;
+    text-shadow: 1px 1px 2px black;
+}
 .slide-arrow {
     position: absolute;
     display: flex;
@@ -501,6 +507,13 @@ footer a {
     .hero__container {
         width: 300px;
     }
+    .slides-container span {
+        font-size: 4rem;
+        position: relative;
+        top: 40%;
+        left: 25%;
+        text-shadow: 1px 1px 2px black;
+    }
 
 }
 
@@ -516,5 +529,13 @@ footer a {
     .body--overflow-hidden {
         overflow: hidden;
     }
+    .slides-container span {
+        font-size: 3rem;
+        position: relative;
+        top: 40%;
+        left: 20%;
+        text-shadow: 1px 1px 2px black;
+    }
+
 
 }
